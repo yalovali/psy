@@ -1,4 +1,4 @@
-# Psy README
+# Psy README by lova
 
 - [ ] TODO Replace or update this README with instructions relevant to your application
 
