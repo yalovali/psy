@@ -50,7 +50,8 @@ import static java.util.Objects.requireNonNull;
  */
 final class DevUser implements AppUserPrincipal, UserDetails {
 
-    private final AppUserInfo appUser;
+    private static final long serialVersionUID = 1L;
+	private final AppUserInfo appUser;
     private final Set<GrantedAuthority> authorities;
     private final String password;
 

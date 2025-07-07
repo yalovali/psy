@@ -35,7 +35,8 @@ import static java.util.Objects.requireNonNull;
  */
 public final class UserId implements Serializable {
 
-    private final String userId;
+    private static final long serialVersionUID = 1L;
+	private final String userId;
 
     private UserId(String userId) {
         // TODO If the userId has a specific format, validate it here.

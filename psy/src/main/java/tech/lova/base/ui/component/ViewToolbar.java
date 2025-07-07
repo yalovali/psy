@@ -10,7 +10,9 @@ import com.vaadin.flow.theme.lumo.LumoUtility.*;
 
 public final class ViewToolbar extends Composite<Header> {
 
-    public ViewToolbar(String viewTitle, Component... components) {
+    private static final long serialVersionUID = 1L;
+
+	public ViewToolbar(String viewTitle, Component... components) {
         addClassNames(Display.FLEX, FlexDirection.COLUMN, JustifyContent.BETWEEN, AlignItems.STRETCH, Gap.MEDIUM,
                 FlexDirection.Breakpoint.Medium.ROW, AlignItems.Breakpoint.Medium.CENTER);
 

@@ -30,7 +30,9 @@ import static com.vaadin.flow.spring.data.VaadinSpringDataHelpers.toSpringPageRe
 @PermitAll // When security is enabled, allow all authenticated users
 public class TaskListView extends Main {
 
-    private final TaskService taskService;
+    private static final long serialVersionUID = 1L;
+
+	private final TaskService taskService;
 
     final TextField description;
     final DatePicker dueDate;

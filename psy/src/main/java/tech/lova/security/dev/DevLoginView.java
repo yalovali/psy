@@ -21,7 +21,8 @@ import com.vaadin.flow.spring.security.AuthenticationContext;
 // No @Route annotation - the route is registered dynamically by DevSecurityConfig.
 class DevLoginView extends Main implements BeforeEnterObserver {
 
-    static final String LOGIN_PATH = "dev-login";
+    private static final long serialVersionUID = 1L;
+	static final String LOGIN_PATH = "dev-login";
     private static final String CALLOUT_HIDDEN_KEY = "walking-skeleton-dev-login-callout-hidden";
 
     private final AuthenticationContext authenticationContext;
