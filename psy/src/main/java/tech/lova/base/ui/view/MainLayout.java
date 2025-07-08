@@ -179,4 +179,25 @@ public final class MainLayout extends AppLayout {
 
 		return userMenu;
 	}
+
+	// update menu icon of the side navigation with a given menu entry
+	/**
+	 * Updates the icon of a side navigation item based on the provided menu entry.
+	 *
+	 * This method finds the corresponding `SideNavItem` in the navigation and
+	 * updates its icon to match the one specified in the menu entry.
+	 *
+	 * @param menuEntry The menu entry containing the new icon information.
+	 */
+	public void updateSideNavIcon(MenuEntry menuEntry) {
+		if (menuEntry == null)
+			return; // Return if the menu entry is null
+		// Find the side navigation item by its path
+		var item = getElement().getChildren().filter(child -> child.getProperty("path").equals(menuEntry.path()))
+				.findFirst().orElse(null);
+		if (item != null)
+			item.setProperty("icon", menuEntry.icon()); // Update the icon property
+		else
+			System.err.println("SideNavItem not found for path: " + menuEntry.path()); // Log an error if not found
+	}
 }

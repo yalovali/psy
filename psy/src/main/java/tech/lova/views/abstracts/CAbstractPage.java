@@ -26,6 +26,14 @@ public abstract class CAbstractPage extends Composite<VerticalLayout> {
 		getContent().setWidth("100%"); // Set the content width to 100%
 		getContent().getStyle().set("flex-grow", "1"); // Ensure the content can grow
 		getContent().setHeightFull(); // Set the content height to full
+		getContent().setAlignItems(VerticalLayout.Alignment.CENTER); // Center align items in the content
+
+		getContent().setJustifyContentMode(VerticalLayout.JustifyContentMode.CENTER); // Center justify content
+
+		// Additional styles can be added here if needed
+		getContent().getStyle().set("overflow", "auto"); // Enable scrolling if content overflows
+		getContent().getStyle().set("box-sizing", "border-box"); // Ensure box-sizing is set to border-box
+		getContent().getStyle().set("display", "flex"); // Use flexbox for layout
 
 	}
 

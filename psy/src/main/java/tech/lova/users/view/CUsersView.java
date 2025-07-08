@@ -13,6 +13,7 @@ import tech.lova.views.abstracts.CPage;
 public class CUsersView extends CAbstractTabPage {
 	// Serial version UID for serialization compatibility
 	private static final long serialVersionUID = 1L; // Added serialVersionUID
+	private final CTableUsers table; // Table to display user data
 
 	/**
 	 * Constructor for the users view. Initializes the view with padding and sets up
@@ -26,6 +27,8 @@ public class CUsersView extends CAbstractTabPage {
 		page2.addMessage("This is the second page!"); // Add a message to the second page
 		addTab("User List", page1); // Add a tab for the users list
 		addTab("Resource Allocation", page2); // Add a tab for the users list
+		table = new CTableUsers(); // Initialize the table for user data
+		page1.getContent().add(table); // Add the user table to the first page
 	}
 
 }
