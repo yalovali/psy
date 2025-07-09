@@ -1,12 +1,9 @@
 package tech.lova.views.abstracts;
 
-import com.vaadin.flow.component.grid.Grid;
-
-public abstract class CTableDB<ObjectType> extends CTable {
+public abstract class CTableDB<ObjectType> extends CTable<ObjectType> {
 
 	// Serial version UID for serialization compatibility
 	private static final long serialVersionUID = 1L; // Added serialVersionUID
-	protected Grid<ObjectType> grid; // Grid to display data
 	// List<ObjectType> people = DataService.getPeople();
 
 	/**

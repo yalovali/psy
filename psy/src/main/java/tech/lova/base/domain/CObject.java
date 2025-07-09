@@ -15,7 +15,7 @@ import jakarta.persistence.SequenceGenerator;
  */
 @MappedSuperclass
 public abstract class CObject {
-
+	public static final int DESCRIPTION_MAX_LENGTH = 255;
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "idgenerator")
 	// The initial value is to account for data.sql demo data ids

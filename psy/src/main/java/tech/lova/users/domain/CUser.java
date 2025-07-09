@@ -1,6 +1,8 @@
 package tech.lova.users.domain;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.validation.constraints.Size;
 import tech.lova.base.domain.CObject;
 
 /**
@@ -12,6 +14,8 @@ import tech.lova.base.domain.CObject;
 @Entity
 public class CUser extends CObject {
 
+	@Column(nullable = false, length = DESCRIPTION_MAX_LENGTH)
+	@Size(max = DESCRIPTION_MAX_LENGTH)
 	private String email;
 	private String password;
 
