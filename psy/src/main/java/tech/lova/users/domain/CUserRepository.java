@@ -11,6 +11,7 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
  * for advanced querying capabilities.
  */
 public interface CUserRepository extends JpaRepository<CUser, Long>, JpaSpecificationExecutor<CUser> {
+//public interface CUserRepository extends JpaRepository<CUser, Long>, JpaSpecificationExecutor<CUser> {
 
 	// If you don't need a total row count, Slice is better than Page as it only
 	// performs a select query.
